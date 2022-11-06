@@ -44,20 +44,53 @@
         display: flex;
         justify-content: center;
       }
-
-      /* -------Slider------- */
-      .carousel-item{
-        height: 75vh;
-        min-height:300px;
-        
-      }
-      .carousel-item img{
-        object-fit: cover;
-        object-position: 100% 50%;
-      }
       .nav-link i{
         color:#cee3dd;
         padding:10px;
+      }
+
+      #sbar input{
+        border: 2px solid #198754;
+        border-radius:10px 0px 0px 10px;
+        margin:0.6rem 0;
+        height:2.4rem;
+        width:80%;
+      }
+      #sbar button{
+        /* border-width:px; */
+        border-radius:0px 10px 10px 0px;
+        margin:0.6rem 0;
+        height:2.4rem;
+      }
+
+      #sbar div{
+        display: flex;
+        justify-content: end;
+      }
+      #sbar .dropdown button{
+        background-color: rgb(29, 75, 59);
+        border-radius:5px;
+        margin:auto;
+      }
+
+      #greet{
+        
+         background:url(images/bg2.jpeg);
+         background-color: rgba(0, 0, 0, 0.473); 
+        background-blend-mode: overlay;
+        height:8rem;
+        color: white;
+        font-size: 5rem;
+        /* font-family: 'Cinzel', serif; */
+        font-family: 'Playfair Display', serif; 
+        /* background-size: cover; */
+        background-size: CONTAIN;
+        /* padding:100px; */
+        text-align: center;
+      }
+      #shop{
+        height: 100vh;
+        background:#e7f7f3;
       }
       
     </style>
@@ -65,12 +98,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>E-commerce </title>
+    <title>Shop like a Pro.</title>
     
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Fonts -->
+    <!------------------- Fonts ----------->
+        <!-- greet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@800;900&display=swap" rel="stylesheet"> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@800;900&display=swap" rel="stylesheet"> 
+       <!-- brand -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet"> 
@@ -85,6 +126,8 @@
 
 <nav class="row navbar navbar-expand-sm" style="background-color:rgb(21, 44, 36); padding:1% 5%;">
     <a href="" class="col-sm navbar-brand" style="color:#e8f3f0; font-family: 'Playfair Display', serif; max-width: 20%;">Classic's</a>
+
+
     <button style="width: 10%;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -124,9 +167,38 @@
     </ul>
   <!-- </div> -->
   </div>
-  
+</nav>
+   <!------------------------------------------ searchbar -------------------------------->
 
-  </nav>
+ 
+  <div class="row " style="background-color:rgb(47, 87, 73);padding:1px;" id="sbar">
+            <span class="col"></span>
+            <div class="col-8">
+            <input type="text" class="" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+
+            <button class="btn btn-outline-success"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <div class="dropdown col-2">
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Men</a></li>
+                  <li><a class="dropdown-item" href="#">Women</a></li>
+                  <li><a class="dropdown-item" href="#">Electronics</a></li>
+                  <li><a class="dropdown-item" href="#">Groceries</a></li>
+                </ul>
+              </div>
+    </div>
+     <!------------------------------------------ Greeting -------------------------------->
+    <div id="greet">
+        Welcome Back!
+    </div>
+    <!------------------------------------------ Shopping Area -------------------------------->
+    <div id="shop">
+
+    </div>
+
    <!------------------------------------------ Footer -------------------------------->
 
    <footer class="cotainer-fluid row" id="footer">
